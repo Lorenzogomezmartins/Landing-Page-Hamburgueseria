@@ -1,0 +1,126 @@
+/* =========================
+   NOVEDADES
+========================= */
+
+.novedades {
+  position: relative;
+  background: #000;
+  padding: 120px 0;
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Aseguramos que el contenido esté arriba */
+.novedades .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* WRAPPER */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTONES */
+.carousel-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid #b00000;
+  color: #b00000;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 5;
+}
+
+.carousel-btn:hover {
+  background: #b00000;
+  color: #fff;
+}
+
+/* CARRUSEL */
+.carousel {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ITEMS */
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+/* Imagen base */
+.carousel-item img {
+  width: 100%;
+  object-fit: contain;
+  transition: 0.5s ease;
+}
+
+/* CENTRO */
+.carousel-item.center {
+  width: 400px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+.carousel-item.center img {
+  filter: drop-shadow(0 25px 50px rgba(0,0,0,0.8));
+}
+
+/* IZQUIERDA */
+.carousel-item.left {
+  width: 260px;
+  opacity: 0.5;
+  transform: translate(calc(-50% - 280px), -50%) scale(0.85);
+  z-index: 1;
+}
+
+.carousel-item.left img {
+  filter: blur(2px) brightness(0.7);
+}
+
+/* DERECHA */
+.carousel-item.right {
+  width: 260px;
+  opacity: 0.5;
+  transform: translate(calc(-50% + 280px), -50%) scale(0.85);
+  z-index: 1;
+}
+
+.carousel-item.right img {
+  filter: blur(2px) brightness(0.7);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-item.left,
+  .carousel-item.right {
+    display: none;
+  }
+}

@@ -1,0 +1,95 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --black: #000000;
+  --dark: #111111;
+  --red: #b00000;
+  --red-light: #e10600;
+  --white: #ffffff;
+}
+
+/* =========================
+   RESET GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* elimina scroll lateral */
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   ESTRUCTURA GLOBAL
+========================= */
+
+section {
+  padding: 100px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   TIPOGRAFÍA
+========================= */
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+  display: inline-block;
+  background-color: var(--red);
+  padding: 14px 32px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--red-light);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   UTILIDADES
+========================= */
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}

@@ -1,0 +1,109 @@
+/* =========================
+   HERO SECTION - CLEAN DARK
+========================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sutil degradado rojo de fondo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 75% 50%,
+    rgba(180, 0, 0, 0.25),
+    transparent 60%
+  );
+  z-index: 1;
+}
+
+/* Contenedor interno */
+.hero-content {
+  max-width: 550px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #dcdcdc;
+  font-weight: 300;
+}
+
+/* Botón más sobrio */
+.hero .btn {
+  background-color: #b00000;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #e10600;
+  transform: translateY(-2px);
+}
+
+/* Imagen derecha */
+.hero-image {
+  z-index: 2;
+  max-width: 750px;   /* más grande */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 120%;        /* agrandamos la hamburguesa */
+  max-width: 850px;   /* límite para que no se descontrole */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 35px 70px rgba(0,0,0,0.9)); /* sombra más fuerte */
+  transition: transform 0.4s ease;
+}
+
+/* pequeño efecto elegante */
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 6%;
+  }
+
+  .hero-content {
+    margin-bottom: 40px;
+  }
+
+  .hero-image {
+    max-width: 400px;
+  }
+}

@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="frontend/imagenes/logo.png" width="120" alt="Logo Fuego Burgers">
-</p>
-
 
 <h3 align="center">Lorenzo Gomez Martins</h3>
 
